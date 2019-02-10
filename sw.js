@@ -1,6 +1,6 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('rest-static-v5').then(function(cache) {
+    caches.open('rest-static-v6').then(function(cache) {
       return cache.addAll(
         [
           '/sw.js',
@@ -11,6 +11,8 @@ self.addEventListener('install', function(event) {
           '/index.html',
           '/',
           '/restaurant.html',
+          '/data/restaurants.json',
+          '/img/**.jpg',
           'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
           'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'
         ]
